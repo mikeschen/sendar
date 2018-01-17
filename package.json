@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "sendar",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Check you and your friends climbing progress",
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
