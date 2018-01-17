@@ -7,7 +7,7 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { user: '' };
+        this.state = { user: 'mikemikaels@yahoo.com' };
 ;
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -29,7 +29,7 @@ class SearchBar extends Component {
         return (
             <form onSubmit={this.onFormSubmit} className='input-group'>
                 <input 
-                    placeholder="Enter Mountain Project username or email"
+                    placeholder="Enter Mountain Project email"
                     className="form-control"
                     value={this.state.user}
                     onChange={this.onInputChange} />

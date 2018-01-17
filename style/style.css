@@ -1,0 +1,11 @@
+.logo {
+    max-width:36px;
+}
+
+.input-group .form-control {
+    border-color: #366897;
+}
+
+.btn-secondary {
+    border-color: #366897 !important;
+}
