@@ -7,18 +7,21 @@ class RoutesList extends Component {
         
         return (
             <tr>
-                <td>here { routeData.routes.name }</td>
+                <td> { routeData.name }</td>
             </tr>
         );
     }
 
     render () {
+        console.log("heres props.routes", this.props.routes);
         return (
             <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th>Type</th>
-                        <th>Progression</th>
+                        <th>Route</th>
+                        <th>Rating</th>
+                        <th>Average Stars</th>
+                        <th>Map</th>
                     </tr>
                 </thead>
                 <tbody>
