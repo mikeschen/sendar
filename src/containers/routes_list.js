@@ -3,11 +3,17 @@ import { connect } from 'react-redux';
 
 class RoutesList extends Component {
     renderRoutes(routeData) {
-        console.log("route date", routeData);
-        
+        console.log("route dataaaaaa", routeData);
+
         return (
             <tr>
-                <td> { routeData.name }</td>
+                <td> 
+                    <a href={ routeData.url}>
+                        <img src={ routeData.imgSqSmall } alt="photo of route" />{ routeData.name }
+                    </a>
+                </td>
+                <td> { routeData.rating }</td>
+                <td> { routeData.stars } { routeData.starVotes } Votes</td>
             </tr>
         );
     }

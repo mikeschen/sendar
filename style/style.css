@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Joti+One');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.wrapper {
+    font-family: 'Ubuntu', sans-serif;
+}
 
 .logo {
     max-width:48px;
@@ -6,7 +10,6 @@
 }
 
 .title {
-    font-family: 'Joti One', cursive;
     font-size: 36px;
     padding: 0 0 0 10px;
     margin-top: 10px;
