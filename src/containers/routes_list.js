@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GoogleMap from '../components/google_map';
+import Loader from '../components/loader';
 import { getStars } from '../helpers';
 
 class RoutesList extends Component {
+
     renderRoutes(routeData) {
         console.log("route data", routeData);
         const id = routeData.id;
@@ -17,6 +19,7 @@ class RoutesList extends Component {
         const lon = routeData.longitude;
 
         return (
+            
             <tr key={id}>
                 <td> 
                     <a href={ url}>
@@ -37,10 +40,12 @@ class RoutesList extends Component {
                     <GoogleMap lat={lat} lon={lon} />
                 </td>
             </tr>
+            
         );
     }
 
     render () {
+        
         return (
             <table className="table table-hover">
                 <thead>
