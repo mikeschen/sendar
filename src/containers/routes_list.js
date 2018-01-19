@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getStars } from '../helpers';
 
 class RoutesList extends Component {
     renderRoutes(routeData) {
         console.log("route dataaaaaa", routeData);
-
+        const starRating = getStars(routeData.stars);
         return (
             <tr>
                 <td> 
@@ -13,7 +14,10 @@ class RoutesList extends Component {
                     </a>
                 </td>
                 <td> { routeData.rating }</td>
-                <td> { routeData.stars } { routeData.starVotes } Votes</td>
+                <td>         
+                    <div className="stars-outer">
+                        <div className="stars-inner" style={{width: starRating}}></div>
+                    </div> - { routeData.starVotes } Votes</td>
             </tr>
         );
     }
