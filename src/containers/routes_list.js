@@ -7,7 +7,7 @@ class RoutesList extends Component {
         console.log("route dataaaaaa", routeData);
         const starRating = getStars(routeData.stars);
         return (
-            <tr>
+            <tr key={routeData.id}>
                 <td> 
                     <a href={ routeData.url}>
                         <img src={ routeData.imgSqSmall } alt="photo of route" />{ routeData.name }
@@ -17,7 +17,11 @@ class RoutesList extends Component {
                 <td>         
                     <div className="stars-outer">
                         <div className="stars-inner" style={{width: starRating}}></div>
-                    </div> - { routeData.starVotes } Votes</td>
+                    </div>
+                    <div>
+                        { routeData.starVotes } Votes
+                    </div>
+                    </td>
             </tr>
         );
     }

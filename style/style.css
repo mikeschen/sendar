@@ -4,6 +4,7 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* HEADER */
 .logo {
     max-width:48px;
     margin-bottom: 20px;
@@ -16,12 +17,32 @@
     display: inline-block;
 }
 
+/* FORM */
+.input-group {
+    margin: 20px 0;
+}
+
 .input-group .form-control {
     border-color: #366897;
 }
 
 .btn-secondary {
     border-color: #366897 !important;
+}
+
+/* TABLE */
+
+td, th {
+    vertical-align: middle !important;
+    /* text-align: center !important; */
+}
+
+td:nth-child(n+2) {
+    text-align: center !important;
+}
+
+th:nth-child(n+2) {
+    text-align: center !important;
 }
 
 .stars-outer {
