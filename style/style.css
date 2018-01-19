@@ -34,37 +34,38 @@
 
 td, th {
     vertical-align: middle !important;
-    /* text-align: center !important; */
-}
-
-td:nth-child(n+2) {
     text-align: center !important;
 }
 
-th:nth-child(n+2) {
-    text-align: center !important;
+td:first-child {
+    width: 75px;
 }
 
 .stars-outer {
     display: inline-block;
     position: relative;
     font-family: FontAwesome;
-  }
-  
-  .stars-outer::before {
-    content: "\f006 \f006 \f006 \f006 \f006";
-  }
-  
-  .stars-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-  }
-  
-  .stars-inner::before {
-    content: "\f005 \f005 \f005 \f005 \f005";
-    color: #f8ce0b;
-  }
+}
+
+.stars-outer::before {
+content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+position: absolute;
+top: 0;
+left: 0;
+white-space: nowrap;
+overflow: hidden;
+width: 0;
+}
+
+.stars-inner::before {
+content: "\f005 \f005 \f005 \f005 \f005";
+color: #f8ce0b;
+}
+
+td:last-of-type, td:last-of-type > div {
+    height: 125px;
+    width: 200px;
+}

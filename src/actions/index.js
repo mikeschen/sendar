@@ -11,15 +11,11 @@ export function fetchUser(email) {
     const url = `${ROOT_URL}&email=${email}`;
     const request = axios.get(url)
         .then((res) => {
-            console.log("res", res.data.ticks);
             res.data.ticks.forEach((tick) => {
-                console.log(tick)
                 routes.push(tick.routeId);
               });
-              console.log("yr routes", routes.join());
               const routeList = routes.join();
               const routesUrl = `${ROUTES_URL}&routeIds=${routeList}`
-              console.log(routesUrl);
               return axios.get(routesUrl)            
         })
         .catch((err) => {

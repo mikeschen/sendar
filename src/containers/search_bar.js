@@ -22,7 +22,6 @@ class SearchBar extends Component {
     onFormSubmit(event) {
         console.log(event);
         event.preventDefault();
-        
         this.props.fetchUser(this.state.user);
         this.setState({ user: '' })
     }

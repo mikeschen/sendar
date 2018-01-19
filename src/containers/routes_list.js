@@ -1,33 +1,46 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import GoogleMap from '../components/google_map';
 import { getStars } from '../helpers';
 
 class RoutesList extends Component {
     renderRoutes(routeData) {
-        console.log("route dataaaaaa", routeData);
+        console.log("route data", routeData);
+        const id = routeData.id;
+        const url = routeData.url;
+        const name = routeData.name;
+        const image = routeData.imgSqSmall;
+        const rating = routeData.rating;
         const starRating = getStars(routeData.stars);
+        const starVotes = routeData.starVotes;
+        const lat = routeData.latitude;
+        const lon = routeData.longitude;
+
         return (
-            <tr key={routeData.id}>
+            <tr key={id}>
                 <td> 
-                    <a href={ routeData.url}>
-                        <img src={ routeData.imgSqSmall } alt="photo of route" />{ routeData.name }
+                    <a href={ url}>
+                        <img src={ image } alt="No Photo of " />
+                        <div>{ name }</div>
                     </a>
                 </td>
-                <td> { routeData.rating }</td>
+                <td> { rating }</td>
                 <td>         
                     <div className="stars-outer">
                         <div className="stars-inner" style={{width: starRating}}></div>
                     </div>
                     <div>
-                        { routeData.starVotes } Votes
+                        { starVotes } Votes
                     </div>
-                    </td>
+                </td>
+                <td>
+                    <GoogleMap lat={lat} lon={lon} />
+                </td>
             </tr>
         );
     }
 
     render () {
-        console.log("heres props.routes", this.props.routes);
         return (
             <table className="table table-hover">
                 <thead>
