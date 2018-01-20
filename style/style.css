@@ -65,6 +65,10 @@ content: "\f005 \f005 \f005 \f005 \f005";
 color: #f8ce0b;
 }
 
+.location {
+    font-size: 12px;
+}
+
 td:last-of-type, td:last-of-type > div {
     height: 125px;
     width: 200px;

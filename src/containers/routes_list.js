@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GoogleMap from '../components/google_map';
 import Loader from '../components/loader';
-import { getStars } from '../helpers';
 
 class RoutesList extends Component {
 
@@ -15,6 +14,7 @@ class RoutesList extends Component {
         const rating = routeData.rating;
         const starRating = getStars(routeData.stars);
         const starVotes = routeData.starVotes;
+        const locations = routeData.location.join(" -> ");
         const lat = routeData.latitude;
         const lon = routeData.longitude;
 
@@ -37,6 +37,7 @@ class RoutesList extends Component {
                     </div>
                 </td>
                 <td>
+                    <span className="location">{ locations }</span>
                     <GoogleMap lat={lat} lon={lon} />
                 </td>
             </tr>
@@ -66,6 +67,21 @@ class RoutesList extends Component {
 
 function mapStateToProps({ routes }) {
     return { routes }
+}
+
+function getStars (rating) {
+    const starPercentage = (rating / 5) * 100;
+    const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+    return starPercentageRounded;
+}
+
+function getLocation (locations) {
+    let result = "";
+    for (var location of locations) {
+        result += location + ">";
+        console.log("here lcoation", result);
+    }
+    return result;
 }
 
 export default connect(mapStateToProps)(RoutesList);

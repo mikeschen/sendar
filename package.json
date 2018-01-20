@@ -6,7 +6,8 @@
   "repository": "git@github.com:mikeschen/sendar.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
