@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Check you and your friends climbing progress",
   "main": "index.js",
+  "homepage": "http://www.mikeschen.com/sendar",
   "repository": "git@github.com:mikeschen/sendar.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",

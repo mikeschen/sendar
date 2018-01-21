@@ -38,6 +38,8 @@ class RoutesList extends Component {
                 </td>
                 <td>
                     <span className="location">{ locations }</span>
+                </td>
+                <td>
                     <GoogleMap lat={lat} lon={lon} />
                 </td>
             </tr>
@@ -54,6 +56,7 @@ class RoutesList extends Component {
                         <th>Route</th>
                         <th>Rating</th>
                         <th>Average Stars</th>
+                        <th>Location</th>
                         <th>Map</th>
                     </tr>
                 </thead>

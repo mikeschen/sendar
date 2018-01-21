@@ -8,7 +8,7 @@ class SearchBar extends Component {
         super(props);
 
         this.state = { 
-            user: 'mikemikaels@yahoo.com'
+            user: 'sugarcrashstudios@gmail.com'
         };
 ;
         this.onInputChange = this.onInputChange.bind(this);
