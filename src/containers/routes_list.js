@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import GoogleMap from '../components/google_map';
-import Loader from '../components/loader';
+import LoadingBar from 'react-redux-loading-bar'
 
 class RoutesList extends Component {
 
@@ -73,15 +73,6 @@ function getStars (rating) {
     const starPercentage = (rating / 5) * 100;
     const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
     return starPercentageRounded;
-}
-
-function getLocation (locations) {
-    let result = "";
-    for (var location of locations) {
-        result += location + ">";
-        console.log("here lcoation", result);
-    }
-    return result;
 }
 
 export default connect(mapStateToProps)(RoutesList);
