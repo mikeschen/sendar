@@ -6,7 +6,6 @@ import LoadingBar from 'react-redux-loading-bar'
 class RoutesList extends Component {
 
     renderRoutes(routeData) {
-        console.log("route data", routeData);
         const id = routeData.id;
         const url = routeData.url;
         const name = routeData.name;

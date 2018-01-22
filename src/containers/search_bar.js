@@ -8,11 +8,15 @@ class SearchBar extends Component {
         super(props);
 
         this.state = { 
-            user: 'sugarcrashstudios@gmail.com'
+            user: ''
         };
 ;
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
+    }
+
+    componentDidMount (){
+        this.props.fetchUser('sugarcrashstudios@gmail.com')
     }
 
     onInputChange(event) {
@@ -30,7 +34,10 @@ class SearchBar extends Component {
             <form onSubmit={this.onFormSubmit} className='input-group'>
                 <input 
                     placeholder="Enter Mountain Project email"
+                    name="login_useremail"
+                    type="email"
                     className="form-control"
+                    required="true"
                     value={this.state.user}
                     onChange={this.onInputChange} />
                 <span className="input-group-btn">
