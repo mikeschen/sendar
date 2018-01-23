@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { loadProgressBar } from 'axios-progress-bar'
 
-
+const API_KEY = 'YOURKEYHERE';
 const ROOT_URL = `https://www.mountainproject.com/data/get-ticks?key=${API_KEY}`;
 const ROUTES_URL = `https://www.mountainproject.com/data/get-routes?key=${API_KEY}`
 
